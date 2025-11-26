@@ -44,25 +44,25 @@ When a user submits their symptoms, the Planner Agent generates relevant follow-
 
 ### Example API Interactions
 
-![User input: fever and cough](screenshots/Screenshot-17.jpg)  
+(screenshots/Screenshot-17.jpg)  
 _User input case with fever and persistent cough. Shows how the agent analyzes respiratory symptoms and asks for relevant follow-up questions._
 
-![Self-care advice sample](screenshots/Screenshot-18.jpg)  
+(screenshots/Screenshot-18.jpg)  
 _Agent response for a mild case: “self_care” recommendation with low confidence across domains, demonstrating conservative triage for non-serious symptoms._
 
-![Worker agent scores](screenshots/Screenshot-19.jpg)  
+(screenshots/Screenshot-19.jpg)  
 _Response body detailing parallel worker agent scores, confirming multi-domain medical reasoning and transparency in evaluation._
 
-![Alternate input sample](screenshots/Screenshot-21.jpg)  
+(screenshots/Screenshot-21.jpg)  
 _Another user request example. Highlights clear input format and agent’s ability to parse varied symptom presentations._
 
-![Headache and nausea self care](screenshots/Screenshot-22.jpg)  
+(screenshots/Screenshot-22.jpg)  
 _Shows decision logic where “self_care” is advised—demonstrates project’s safe medical advice for benign headache and nausea symptoms._
 
-![GI symptoms JSON response](screenshots/Screenshot-23.jpg)  
+(screenshots/Screenshot-23.jpg)  
 _Final JSON response example for GI-related symptoms, documenting how your agent combines scores and notes from all worker agents for output._
 
-![Urgent care cardiac case](screenshots/Screenshot-24.jpg)  
+(screenshots/Screenshot-24.jpg)  
 _Agent recommending “urgent_care” due to detected red flags in chest pain and shortness of breath, displaying strict medical safety protocol._
 
 
