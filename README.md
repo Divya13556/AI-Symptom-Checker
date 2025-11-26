@@ -37,3 +37,14 @@ uvicorn main:app --reload
 ## Safety
 - Not a medical device. Provide clear disclaimer.
 - Conservative recommendations by default.
+
+## How It Works
+
+When a user submits their symptoms, the Planner Agent generates relevant follow-up questions. Multiple Worker Agents (for respiratory, cardiac, GI, neuro domains) score symptom severity in parallel. The Evaluator Agent reviews risk scores and red-flags to safely recommend next steps, such as home care, seeing a doctor, or urgent intervention. All tasks are logged for review.
+
+
+## Limitations & Disclaimer
+
+This agent provides only conservative triage recommendations—it does **not** diagnose conditions, and is **not a substitute for professional medical advice, diagnosis, or treatment**. Always consult a qualified physician for any serious symptoms.
+
+
