@@ -43,10 +43,10 @@ uvicorn main:app --reload
 When a user submits their symptoms, the Planner Agent generates relevant follow-up questions. Multiple Worker Agents (for respiratory, cardiac, GI, neuro domains) score symptom severity in parallel. The Evaluator Agent reviews risk scores and red-flags to safely recommend next steps, such as home care, seeing a doctor, or urgent intervention. All tasks are logged for review.
 ### Example API Interactions
 
-![User input: fever and cough](screenshots/Screenshot(17).jpg)  
+![User input: fever and cough](screenshots/Screenshot (17).png)  
 _User input case with fever and persistent cough. Shows how the agent analyzes respiratory symptoms and asks for relevant follow-up questions._
 
-![Self-care advice sample](screenshots/Screenshot(18).jpg)  
+![Self-care advice sample](screenshots/Screenshot (17).png)  
 _Agent response for a mild case: “self_care” recommendation with low confidence across domains, demonstrating conservative triage for non-serious symptoms._
 
 ![Worker agent scores](screenshots/Screenshot(19).jpg)  
