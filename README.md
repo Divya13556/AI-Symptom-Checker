@@ -42,6 +42,36 @@ uvicorn main:app --reload
 
 When a user submits their symptoms, the Planner Agent generates relevant follow-up questions. Multiple Worker Agents (for respiratory, cardiac, GI, neuro domains) score symptom severity in parallel. The Evaluator Agent reviews risk scores and red-flags to safely recommend next steps, such as home care, seeing a doctor, or urgent intervention. All tasks are logged for review.
 
+## Example API Interactions
+
+### Screenshot-17.jpg
+![User input: fever and cough](screenshots/Screenshot-17.jpg)
+*User input case with fever and persistent cough. Shows how the agent analyzes respiratory symptoms and asks for relevant follow-up questions.*
+
+### Screenshot-18.jpg
+![Self-care advice sample](screenshots/Screenshot-18.jpg)
+*Agent response for a mild case: “self_care” recommendation with low confidence across domains, demonstrating conservative triage for non-serious symptoms.*
+
+### Screenshot-19.jpg
+![Worker agent scores](screenshots/Screenshot-19.jpg)
+*Response body detailing parallel worker agent scores, confirming multi-domain medical reasoning and transparency in evaluation.*
+
+### Screenshot-21.jpg
+![Alternate input sample](screenshots/Screenshot-21.jpg)
+*Another user request example. Highlights clear input format and agent’s ability to parse varied symptom presentations.*
+
+### Screenshot-22.jpg
+![Headache and nausea self care](screenshots/Screenshot-22.jpg)
+*Shows decision logic where “self_care” is advised—demonstrates project’s safe medical advice for benign headache and nausea symptoms.*
+
+### Screenshot-23.jpg
+![GI symptoms JSON response](screenshots/Screenshot-23.jpg)
+*Final JSON response example for GI-related symptoms, documenting how your agent combines scores and notes from all worker agents for output.*
+
+### Screenshot-24.jpg
+![Urgent care cardiac case](screenshots/Screenshot-24.jpg)
+*Agent recommending “urgent_care” due to detected red flags in chest pain and shortness of breath, displaying strict medical safety protocol.*
+
 
 ## Limitations & Disclaimer
 
