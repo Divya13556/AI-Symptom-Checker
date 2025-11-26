@@ -42,35 +42,28 @@ uvicorn main:app --reload
 
 When a user submits their symptoms, the Planner Agent generates relevant follow-up questions. Multiple Worker Agents (for respiratory, cardiac, GI, neuro domains) score symptom severity in parallel. The Evaluator Agent reviews risk scores and red-flags to safely recommend next steps, such as home care, seeing a doctor, or urgent intervention. All tasks are logged for review.
 
-## Example API Interactions
+### Example API Interactions
 
-### Screenshot-17.jpg
-![User input: fever and cough](screenshots/Screenshot-17.jpg)
-*User input case with fever and persistent cough. Shows how the agent analyzes respiratory symptoms and asks for relevant follow-up questions.*
+![User input: fever and persistent cough](screenshots/1.png)  
+User submits symptoms of fever and persistent cough. Shows how the agent detects a possible respiratory issue and asks targeted follow-up questions.
 
-### Screenshot-18.jpg
-![Self-care advice sample](screenshots/Screenshot-18.jpg)
-*Agent response for a mild case: “self_care” recommendation with low confidence across domains, demonstrating conservative triage for non-serious symptoms.*
+![Self-care recommendation for mild case](screenshots/2.png)  
+Agent response for a mild symptom profile: recommends “self_care” and explains low severity, demonstrating conservative triage logic for safe outcomes.
 
-### Screenshot-19.jpg
-![Worker agent scores](screenshots/Screenshot-19.jpg)
-*Response body detailing parallel worker agent scores, confirming multi-domain medical reasoning and transparency in evaluation.*
+![Multi-agent score breakdown](screenshots/3.png)  
+Details parallel scores from worker agents for different body domains, confirming transparency and explainability in clinical reasoning.
 
-### Screenshot-21.jpg
-![Alternate input sample](screenshots/Screenshot-21.jpg)
-*Another user request example. Highlights clear input format and agent’s ability to parse varied symptom presentations.*
+![Alternate symptom input workflow](screenshots/4.png)  
+Highlights formatted input and agent’s adaptability to varied ways users express their clinical symptoms.
 
-### Screenshot-22.jpg
-![Headache and nausea self care](screenshots/Screenshot-22.jpg)
-*Shows decision logic where “self_care” is advised—demonstrates project’s safe medical advice for benign headache and nausea symptoms.*
+![Headache and nausea advice](screenshots/5.png)  
+Shows logic for benign headache and nausea—agent advisement for self-care at home, emphasizing safety and caution.
 
-### Screenshot-23.jpg
-![GI symptoms JSON response](screenshots/Screenshot-23.jpg)
-*Final JSON response example for GI-related symptoms, documenting how your agent combines scores and notes from all worker agents for output.*
+![GI domain JSON response](screenshots/6.png)  
+Full example of how the system aggregates and analyzes symptoms related to the gastrointestinal domain and gives structured feedback.
 
-### Screenshot-24.jpg
-![Urgent care cardiac case](screenshots/Screenshot-24.jpg)
-*Agent recommending “urgent_care” due to detected red flags in chest pain and shortness of breath, displaying strict medical safety protocol.*
+![Urgent cardiac care trigger](screenshots/7.png)  
+Shows agent response for chest pain/shortness of breath—system raises urgent care recommendation and flags possible cardiac emergency.
 
 
 ## Limitations & Disclaimer
